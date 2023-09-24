@@ -38,7 +38,6 @@ require('dotenv').config();
 const dbName = process.env.DB_NAME;
 const uri = process.env.MONGO_URI;
 
-
 async function connectToMongo() {
   const client = new MongoClient(uri);
 
@@ -50,11 +49,10 @@ async function connectToMongo() {
     const contactsCollection = db.collection("contacts");
 
     return { client, contactsCollection };
-
   } catch (err) {
     console.error("Error:", err);
-    throw err;
   }
 }
 
 module.exports = connectToMongo;
+
