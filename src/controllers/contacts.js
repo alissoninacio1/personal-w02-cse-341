@@ -1,19 +1,55 @@
+// const connectToMongo = require("../database/mongo");
+
+// async function getContacts() {
+//   const { client, contactsCollection } = await connectToMongo();
+
+//   try {
+//     const contacts = await contactsCollection.find({}).toArray();
+//     return contacts;
+//   } catch (err) {
+//     console.error("Error:", err);
+//   } finally {
+//     client.close();
+//     console.log("Disconnected from MongoDB");
+//   }
+// }
+
+// module.exports = {
+//   getContacts
+// };
+
 const connectToMongo = require("../database/mongo");
 
-async function getContacts() {
-  const { client, contactsCollection } = await connectToMongo();
+async function queryCollection(queryFunction) {
+  const { contactsCollection } = await connectToMongo();
 
   try {
-    const contacts = await contactsCollection.find({}).toArray();
-    return contacts;
+    return await queryFunction(contactsCollection);
   } catch (err) {
     console.error("Error:", err);
+    throw err;
   } finally {
-    client.close();
     console.log("Disconnected from MongoDB");
   }
 }
 
+async function getContacts() {
+  return queryCollection(async (collection) => {
+    return await collection.find({}).toArray();
+  });
+}
+
+async function getContactById(id) {
+  return queryCollection(async (collection) => {
+    return await collection.findOne({ _id: id });
+  });
+}
+
 module.exports = {
-  getContacts
+  getContacts,
+  getContactById,
 };
+
+
+
+
