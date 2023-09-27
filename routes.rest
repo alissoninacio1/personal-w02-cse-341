@@ -8,3 +8,12 @@ GET http://localhost:8080/contacts/650f9d73ef6705f73f23f22d
 GET http://localhost:8080/contacts/650f9d73ef6705f73f23f22e
 
 ###
+
+#render
+GET https://alisson-personal-w02-cse-341.onrender.com/contacts
+###
+GET https://alisson-personal-w02-cse-341.onrender.com/contacts/650f9d73ef6705f73f23f22c
+###
+GET https://alisson-personal-w02-cse-341.onrender.com/contacts/650f9d73ef6705f73f23f22d
+###
+GET https://alisson-personal-w02-cse-341.onrender.com/contacts/650f9d73ef6705f73f23f22e
