@@ -14,20 +14,20 @@ router.get("/contacts", async (req, res) => {
 
 
 router.get("/:id", async (req, res) => {
-    const { id } = req.params;
-  
-    try {
-      const contact = await getContactById(id);
-  
-      if (!contact) {
-        res.status(404).json({ error: "Contact not found." });
-        return;
-      }
-  
-      res.json(contact);
-    } catch (err) {
-      res.status(500).json({ error: "Error fetching contact by ID." });
+  const { id } = req.params;
+  console.log("ID rreceived:", id); 
+  try {
+    const contact = await getContactById(id);
+
+    if (!contact) {
+      res.status(404).json({ error: "Contact not found." });
+      return;
     }
-  });
+
+    res.json(contact);
+  } catch (err) {
+    res.status(500).json({ error: "Error fetching contact by ID." });
+  }
+});
 
 module.exports = router;

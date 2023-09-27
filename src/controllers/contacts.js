@@ -1,7 +1,10 @@
 const connectToMongo = require("../database/mongo");
 
+const { ObjectId } = require('mongodb');
+
 async function queryCollection(queryFunction) {
   const { contactsCollection } = await connectToMongo();
+
 
   try {
     return await queryFunction(contactsCollection);
@@ -19,11 +22,30 @@ async function getContacts() {
   });
 }
 
+
 async function getContactById(id) {
-  return queryCollection(async (collection) => {
-    return await collection.findOne({ _id: id });
-  });
+
+
+  const { contactsCollection } = await connectToMongo();
+  try {
+    const objectId = new ObjectId(id);
+    console.log("ID code:", objectId); 
+
+    const contact = await contactsCollection.findOne({ _id: objectId });
+    return contact;
+  } catch (err) {
+    console.error("Error fetching contact by ID:", err);
+    throw err;
+  } finally {
+    console.log("Disconnected from MongoDB");
+  }
 }
+
+
+
+
+
+
 
 module.exports = {
   getContacts,
