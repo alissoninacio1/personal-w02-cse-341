@@ -1,6 +1,7 @@
+/* eslint-disable require-jsdoc */
 // mongo db connection- https://www.mongodb.com/blog/post/quick-start-nodejs-mongodb-how-to-get-connected-to-your-database
 
-const { MongoClient } = require("mongodb");
+const {MongoClient} = require('mongodb');
 require('dotenv').config();
 
 const dbName = process.env.DB_NAME;
@@ -11,14 +12,14 @@ async function connectToMongo() {
 
   try {
     await client.connect();
-    console.log("Connected to MongoDB");
+    console.log('Connected to MongoDB');
 
     const db = client.db(dbName);
-    const contactsCollection = db.collection("contacts");
+    const contactsCollection = db.collection('contacts');
 
-    return { client, contactsCollection };
+    return {client, contactsCollection};
   } catch (err) {
-    console.error("Error:", err);
+    console.error('Error:', err);
   }
 }
 
