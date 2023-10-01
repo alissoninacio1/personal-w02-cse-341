@@ -13,9 +13,15 @@ async function getContacts() {
   }
 }
 
+
 async function getContactById(id) {
   const { contactsCollection } = await connectToMongo();
   try {
+    
+    if (!ObjectId.isValid(id)) {
+      return null; 
+    }
+    
     const objectId = new ObjectId(id);
     console.log("ID code:", objectId);
 
