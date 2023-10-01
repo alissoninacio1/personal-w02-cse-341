@@ -18,7 +18,7 @@ Content-Type: application/json
 
 
 ### 
-PUT http://localhost:8080/contacts/650f9d73ef6705f73f23f22d HTTP/1.1
+PUT http://localhost:8080/contacts/650f9d73ef6705f73f23f22e HTTP/1.1
 content-type: application/json
 
 {
@@ -31,7 +31,7 @@ content-type: application/json
 
 
 ###
-DELETE http://localhost:8080/contacts/6518bfe34d36d5f6fbd44ecc HTTP/1.1
+DELETE http://localhost:8080/contacts/6518b7960a8377358b98d182 HTTP/1.1
 
 
 
