@@ -2,18 +2,77 @@
 GET http://localhost:8080/contacts
 ###
 GET http://localhost:8080/contacts/650f9d73ef6705f73f23f22c
-###
-GET http://localhost:8080/contacts/650f9d73ef6705f73f23f22d
-###
-GET http://localhost:8080/contacts/650f9d73ef6705f73f23f22e
+
 
 ###
+POST http://localhost:8080/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "Joao",
+  "lastName": "Silva",
+  "email": "silvaj@test.com",
+  "favoriteColor": "Brown",
+  "birthday": "06/04/1998"
+}
+
+
+### 
+PUT http://localhost:8080/contacts/650f9d73ef6705f73f23f22d HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Ze",
+    "lastName":"Zildo",
+    "email":"sarahB@gmail.com",
+    "favoriteColor":"Yellow",
+    "birthday":"06/12/20"
+}
+
+
+###
+DELETE http://localhost:8080/contacts/650f9d73ef6705f73f23f22c HTTP/1.1
+
+
+
+
+
+
+
 
 #render
 GET https://alisson-personal-w02-cse-341.onrender.com/contacts
 ###
 GET https://alisson-personal-w02-cse-341.onrender.com/contacts/650f9d73ef6705f73f23f22c
+
+
 ###
-GET https://alisson-personal-w02-cse-341.onrender.com/contacts/650f9d73ef6705f73f23f22d
+POST https://alisson-personal-w02-cse-341.onrender.com/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "Joao",
+  "lastName": "Silva",
+  "email": "silvaj@test.com",
+  "favoriteColor": "Brown",
+  "birthday": "06/04/1998"
+}
+
+
+
+### 
+PUT https://alisson-personal-w02-cse-341.onrender.com/contacts650f9d73ef6705f73f23f22d HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Ze",
+    "lastName":"Zildo",
+    "email":"sarahB@gmail.com",
+    "favoriteColor":"Yellow",
+    "birthday":"06/12/20"
+}
+
+
 ###
-GET https://alisson-personal-w02-cse-341.onrender.com/contacts/650f9d73ef6705f73f23f22e
+DELETE https://alisson-personal-w02-cse-341.onrender.com/contacts650f9d73ef6705f73f23f22c HTTP/1.1
+

@@ -1,33 +1,23 @@
-const express = require("express");
+
+const express = require('express');
 const router = express.Router();
-const { getContacts, getContactById } = require("../controllers/contacts");
+const { 
+  handleGetContacts, 
+  handleGetContactById, 
+  handleCreateContact,
+  handleUpdateContact,
+  handleDeleteContact
+} = require("../controllers/handleContacts");
 
 
-router.get("/contacts", async (req, res) => {
-  try {
-    const contacts = await getContacts();
-    res.json(contacts);
-  } catch (err) {
-    res.status(500).json({ error: "Error fetching contact." });
-  }
-});
+router.get("/contacts", handleGetContacts);
 
+router.get("/:id", handleGetContactById);
 
-router.get("/:id", async (req, res) => {
-  const { id } = req.params;
-  console.log("ID rreceived:", id); 
-  try {
-    const contact = await getContactById(id);
+router.post("/contacts", handleCreateContact);
 
-    if (!contact) {
-      res.status(404).json({ error: "Contact not found." });
-      return;
-    }
+router.put("/contacts/:id", handleUpdateContact);
 
-    res.json(contact);
-  } catch (err) {
-    res.status(500).json({ error: "Error fetching contact by ID." });
-  }
-});
+router.delete("/contacts/:id", handleDeleteContact);
 
 module.exports = router;
