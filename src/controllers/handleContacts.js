@@ -58,7 +58,7 @@ async function handleUpdateContact(req, res) {
     const contactUpdated = await updateContact(id, updatedContactData);
 
     if (contactUpdated) {
-      res.status(200).json({message: 'Contact updated successfully.'});
+      res.status(204).json({message: 'Contact updated successfully.'});
     } else {
       res.status(404).json({error: 'Contact not found or not updated.'});
     }
