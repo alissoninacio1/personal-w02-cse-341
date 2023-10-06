@@ -26,7 +26,8 @@ const doc = {
     title: 'API Documentation',
     description: 'Documentation for your API',
   },
-  host: 'localhost:8080', 
+  // host: 'localhost:8080', 
+  host: 'alisson-personal-w02-cse-341.onrender.com',
   basePath: '/',
 };
 
