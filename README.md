@@ -9,4 +9,5 @@ https://alisson-personal-w02-cse-341.onrender.com/api-docs/
 https://cse341-contacts-frontend.netlify.app/
 
 
-###use this link the frontend app:   https://alisson-personal-w02-cse-341.onrender.com
+###
+use this link in the search bar of this frontend app:   https://alisson-personal-w02-cse-341.onrender.com
