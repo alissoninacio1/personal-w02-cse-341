@@ -1,7 +1,7 @@
 #localhost 
 GET http://localhost:8080/contacts
 ###
-GET http://localhost:8080/contacts/650f9d73ef6705f73f23f22e
+GET http://localhost:8080/contacts/650f9d73ef6705f73f23f22d
 
 
 ###
@@ -11,20 +11,20 @@ Content-Type: application/json
 {
   "firstName": "Joao",
   "lastName": "Silva",
-  "email": "silvaj@test.com",
+  "email": "silvaj@testnew.com",
   "favoriteColor": "Brown",
   "birthday": "06/04/1998"
 }
 
 
 ### 
-PUT http://localhost:8080/contacts/650f9d73ef6705f73f23f22e HTTP/1.1
+PUT http://localhost:8080/contacts/6518dbe34ce114d79b47c041 HTTP/1.1
 content-type: application/json
 
 {
     "firstName":"Ze",
     "lastName":"Zildo",
-    "email":"sarahB@gmail.com",
+    "email":"zzildo@gmail.com",
     "favoriteColor":"Yellow",
     "birthday":"06/12/20"
 }
