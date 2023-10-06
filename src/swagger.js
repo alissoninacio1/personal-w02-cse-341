@@ -31,4 +31,5 @@ const doc = {
   basePath: '/',
 };
 
+
 swaggerAutogen(outputFile, endpointsFiles, doc);
