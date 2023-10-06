@@ -8,7 +8,7 @@
   "host": "alisson-personal-w02-cse-341.onrender.com",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/contacts": {
