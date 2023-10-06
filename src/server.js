@@ -25,6 +25,9 @@ const app = express();
 const port = 8080;
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger_output.json'); 
+const cors = require('cors');
+
+app.use(cors());
 
 const contactsRouter = require('./routes/index');
 
