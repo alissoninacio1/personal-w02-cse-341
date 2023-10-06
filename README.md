@@ -6,8 +6,12 @@ https://alisson-personal-w02-cse-341.onrender.com/contacts
 
 https://alisson-personal-w02-cse-341.onrender.com/api-docs/
 
-https://cse341-contacts-frontend.netlify.app/
+
 
 
 ###
-use this link in the search bar of this frontend app:   https://alisson-personal-w02-cse-341.onrender.com
+Testing the app in a frontend environment.
+
+Frontend: https://cse341-contacts-frontend.netlify.app/
+
+Put this link in the search bar.   https://alisson-personal-w02-cse-341.onrender.com
